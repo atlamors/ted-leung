@@ -1,1 +1,44 @@
 @import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-hanken-grotesk), Arial, sans-serif;
+  --font-serif: var(--font-newsreader), Georgia, serif;
+}
+
+:root {
+  /* Green and gold sampled from the supplied Group 7 logo. */
+  --brand-green: #304840;
+  --brand-gold: #e8c020;
+  --page-background: #f8f8f4;
+  --text-primary: #263c34;
+  --text-secondary: #5e6b63;
+  --guide: rgb(48 72 64 / 9%);
+  --page-inset: clamp(20px, 4.5vw, 72px);
+  --content-inset: clamp(24px, 3.4vw, 52px);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+body {
+  font-family: var(--font-hanken-grotesk), Arial, sans-serif;
+  background: var(--page-background);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--brand-gold);
+  color: var(--text-primary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-green);
+  outline-offset: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

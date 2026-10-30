@@ -24,6 +24,11 @@
 .DS_Store
 *.pem
 
+# Original client assets and local review captures
+/photography/
+/.codex-remote-attachments/
+/.local/
+
 # debug
 npm-debug.log*
 yarn-debug.log*
